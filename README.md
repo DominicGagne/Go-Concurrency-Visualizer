@@ -19,7 +19,7 @@ A _green_ vertical line indicates a goroutine is unblocked and working.
 
 _Blue_ horizontal lines represent communication across a channel from one goroutine to another.
 _Grey_ horizontal lines represent a goroutine spawning, or being terminated
-![alt text](assets/terminated.png "Terminated" =20x)
+![alt text](assets/terminated.png =20x)
 
 A ping pong match between two goroutines!
 ![](assets/pongOne.gif)
