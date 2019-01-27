@@ -1,6 +1,7 @@
 # Go-Concurrency-Visualizer
 A Go runtime concurrency visualizer
 
+![](fanInOne.gif)
 
 This tool is built on top of the `gotrace` tool created by Ivan Danyliuk.  The tool developed by Ivan is wonderful.  However, the original `gotrace` suffered from many usability issues, lack of useful error message outpout, and appears to now be unmaintained.
 Original tool: https://github.com/divan/gotrace
