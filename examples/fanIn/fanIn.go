@@ -17,7 +17,7 @@ func main() {
 
 	var channels []chan int
 
-	for i := 0; i < 50; i++ {
+	for i := 0; i < 20; i++ {
 		ch := make(chan int)
 		go produceData(ch)
 		channels = append(channels, ch)
