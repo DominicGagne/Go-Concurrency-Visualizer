@@ -81,9 +81,6 @@ function init() {
 		trace.onControlsChanged(orbit.object);
 	});
 
-	// ADD CUSTOM KEY HANDLERS
-	document.addEventListener("keydown", function(event) {keydown(event)}, false);
-
 	console.log("slowing down trace")
 	trace.slowdown();
 	trace.slowdown();
@@ -91,6 +88,8 @@ function init() {
 	trace.slowdown();
 	trace.slowdown();
 
+	// ADD CUSTOM KEY HANDLERS
+	document.addEventListener("keydown", function(event) {keydown(event)}, false);
 
 	document.body.appendChild( renderer.domElement );
 

@@ -1,3 +1,4 @@
 .DS_Store
 gotrace/trace.out
 gotrace/binary
+gotrace/.DS_Store
