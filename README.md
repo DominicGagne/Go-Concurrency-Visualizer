@@ -9,7 +9,7 @@ Note the goroutine towards the bottom left receiving the aggregate merged result
 The source code for this particular program is under `/examples/fanIn/fanIn.go`
 
 
-# Usage:
+# Usage
 
 Copy a go source file into the root directory of this project, such as `hello.go`.\
 Type `./visualize hello.go`
