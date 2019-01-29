@@ -1,5 +1,5 @@
 # Go-Concurrency-Visualizer
-### Improvements to Ivan Danyliuk's Tool
+### Improvements to Ivan Danyliuk's visualization tool `gotrace`
 
 ![](assets/fanInOne.gif)
 
