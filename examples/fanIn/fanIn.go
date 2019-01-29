@@ -54,7 +54,6 @@ func merge(channels ...chan int) <-chan int {
 	outBound := make(chan int)
 
 	wg := &sync.WaitGroup{}
-
 	wg.Add(len(channels))
 
 	output := func(dataSource chan int) {

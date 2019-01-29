@@ -11,7 +11,7 @@ func main() {
 	trace.Start(os.Stderr)
 
 	c := gen(2, 3, 4, 5)
-	outBound := square(c)
+	outBound := square(square(square(square(square(c)))))
 
 	for val := range outBound {
 		fmt.Printf("received val: %d\n", val)
