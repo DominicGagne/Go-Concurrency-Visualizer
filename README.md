@@ -30,7 +30,7 @@ A ping pong match between two goroutines!
 
 Usage:
 
-Copy a go source file into the root directory of this project, such as `hello.go`.
+Copy a go source file into the root directory of this project, such as `hello.go`.\
 Type `./visualize hello.go`
 
 The first time you run this tool, a docker image will be built from source, which may take a few minutes. Subsequent visualizations will be significantly faster.
