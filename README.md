@@ -1,5 +1,5 @@
 # Go-Concurrency-Visualizer
-### A Go runtime concurrency visualizer
+### Improvements to Ivan Danyliuk's Tool
 
 ![](assets/fanInOne.gif)
 
