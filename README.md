@@ -5,8 +5,7 @@
 
 Above is a visualization of the common fan-in concurrency pattern.\
 Note the goroutine towards the bottom left receiving the aggregate merged results from many channels.\
-\
-
+&nbsp;
 The source code for this particular program is under `/examples/fanIn/fanIn.go`
 
 
