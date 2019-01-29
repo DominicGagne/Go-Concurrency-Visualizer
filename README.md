@@ -1,7 +1,8 @@
 # Go-Concurrency-Visualizer
-A Go runtime concurrency visualizer
+### A Go runtime concurrency visualizer
 
-Visualization of the common fan-in concurrency pattern. Note the goroutine towards the bottom receiving the aggregate merged results from many channels.
+Below if a visualization of the common fan-in concurrency pattern.
+Note the goroutine towards the bottom left receiving the aggregate merged results from many channels.
 
 ![](assets/fanInOne.gif)
 
