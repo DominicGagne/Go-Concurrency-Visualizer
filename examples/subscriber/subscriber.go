@@ -9,12 +9,12 @@ import (
 
 type notifier struct {
 	events            chan int
-	subscribers       []chan int
+	subscribers       map[int]chan int
 	subscribeInternal chan chan int
 }
 
 func NewNotifier() *notifier {
-	return &notifier{events: make(chan int), subscribeInternal: make(chan chan int)}
+	return &notifier{events: make(chan int), subscribers: make(map[int]chan int), subscribeInternal: make(chan chan int)}
 }
 
 func (n *notifier) subscribe() <-chan int {
@@ -30,15 +30,18 @@ func (n *notifier) run() {
 			fmt.Printf("received a new event: %+v\n", event)
 
 			// inform subscribers
-			for _, sub := range n.subscribers {
-				// TODO: add timeout.
-				sub <- event
+			for id, sub := range n.subscribers {
+				select {
+				case sub <- event:
+					// subscriber has received the message, carry on to the next one
+				case <-time.After(time.Millisecond * 500):
+					// subscriber has not responded in 500ms, kill that consumer
+					delete(n.subscribers, id)
+				}
 			}
-
 		case sub := <-n.subscribeInternal:
-			n.subscribers = append(n.subscribers, sub)
+			n.subscribers[len(n.subscribers)] = sub
 		}
-		// TODO: heartbeat for events
 	}
 }
 
