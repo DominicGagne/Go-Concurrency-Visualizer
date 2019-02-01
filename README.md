@@ -1,10 +1,25 @@
 # Go-Concurrency-Visualizer
-A Go runtime concurrency visualizer
+#### Improvements to Ivan Danyliuk's visualization tool `gotrace`
 
-Visualization of the common fan-in concurrency pattern. Note the goroutine towards the bottom receiving the aggregate merged results from many channels.
 ![](assets/fanInOne.gif)
 
-## About
+Above is a visualization of the common fan-in concurrency pattern.\
+Note the goroutine towards the bottom left receiving the aggregate merged results from many channels.\
+<br>
+The source code for this particular program is under `/examples/fanIn/fanIn.go`
+
+
+# Usage
+
+Copy a go source file into the root directory of this project, such as `hello.go`.\
+Type `./visualize hello.go`
+
+The first time you run this tool, a docker image will be built from source, which may take a few minutes. Subsequent visualizations will be significantly faster.
+
+Press _s_ to slow  the visualization, and _f_ to speed it up. 
+Pressing _r_ will restart the visualization.
+
+# About
 This tool is built on top of the `gotrace` tool created by Ivan Danyliuk.  The tool developed by Ivan is wonderful.  However, the original `gotrace` suffered from many usability issues, lack of useful error message outpout, and appears to now be unmaintained.
 
 Original tool: https://github.com/divan/gotrace
@@ -24,15 +39,8 @@ _Grey_ horizontal lines represent a goroutine spawning, or being terminated.
 A ping pong match between two goroutines!
 ![](assets/pongOne.gif)
 
+# Future Work
+I don't like having to recompile and rerun the program each time, I'll see if I can add some form of caching for unchanged binaries.
 
 
-Usage:
-
-Copy a go source file into the root directory of this project, such as `hello.go`.
-Type `./visualize hello.go`
-
-The first time you run this tool, a docker image will be built from source, which may take a few minutes. Subsequent visualizations will be significantly faster.
-
-Press _s_ to slow  the visualization, and _f_ to speed it up. 
-Pressing _r_ will restart the visualization.
 
